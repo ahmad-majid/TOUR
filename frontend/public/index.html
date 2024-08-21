@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>React App</title>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div class="cover-container">
+    <img src="%PUBLIC_URL%/cover-image.jpg" alt="Cover Image" />
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      var coverContainer = document.querySelector('.cover-container');
+      if (window.scrollY > 200) { // Change 200 to the scroll distance you prefer
+        coverContainer.style.opacity = 0; // Fade out the current cover
+        // You can also change the cover image/src here if needed
+      } else {
+        coverContainer.style.opacity = 1; // Restore opacity if scrolled back up
+      }
+    });
+  </script>
+</body>
+</html>
